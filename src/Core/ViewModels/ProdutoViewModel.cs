@@ -5,6 +5,10 @@ namespace Lab.Core.Mv
 {
     public class ProdutoViewModel
     {
+        public ProdutoViewModel()
+        {
+            Id = Guid.NewGuid();
+        }
         public Guid Id { get; set;}
         public string Codigo {get; set;}
         public Categoria Categoria {get; set;}

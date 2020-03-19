@@ -6,10 +6,7 @@ namespace Lab.Core.Model
 {
     public class Produto
     {
-        public Produto()
-        {
-            Id = Guid.NewGuid();
-        }
+        
         public Guid Id { get; set;}
         public string Codigo {get; set;}
         public Guid CategoriaId {get; set;}

@@ -28,8 +28,9 @@ namespace Lab.Business
             produto.Preco = produtoViewlModel.Preco;
             if (produtoViewlModel.Categoria != null)
             {
-                produto.CategoriaId = categoriaRepository.GetCategoria(produtoViewlModel.Categoria);
+            produto.CategoriaId = categoriaRepository.GetCategoria(produtoViewlModel.Categoria);
             }
+
             produtoRepository.Add(produto);
             // }
         }
@@ -57,6 +58,11 @@ namespace Lab.Business
                 produtoViewModel.Preco = produtos[i].Preco;
                 produtoViewModel.UnidadeMedida = produtos[i].UnidadeMedida;
                 produtoViewModel.Categoria = categoriaRepository.GetById(produtos[i].CategoriaId);
+                if (produtoViewModel.Categoria == null)
+                {
+                produtoViewModel.Categoria = new Categoria();
+                }
+
                 produtosViewModel.Add(produtoViewModel);
             }
             return produtosViewModel;

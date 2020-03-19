@@ -16,6 +16,7 @@ namespace Lab.Repository
         }
         public void Add(Categoria categoria)
         {
+            categoria.Id = Guid.NewGuid();
             db.Categorias.Add(categoria);
             db.SaveChanges();
         }
@@ -32,8 +33,16 @@ namespace Lab.Repository
         }
         public Guid GetCategoria(Categoria categoria)
         {
+            if(categoria != null)
+            {
             var c = db.Categorias.Find(categoria.Id);
-            return c.Id;            
+            return c.Id;
+            }
+            else
+            {
+                Guid nulo = Guid.Empty;
+                return nulo;
+            }      
         }
         public List<Categoria> GetAll()
         {

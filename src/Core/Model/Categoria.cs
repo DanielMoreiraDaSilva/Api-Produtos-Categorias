@@ -8,15 +8,12 @@ namespace Lab.Core.Model
     {
         public Categoria()
         {
-            Id = Guid.NewGuid();
             criadoEm = DateTime.Now;
         }
         public Guid Id { get; set; }
         public String codigo { get; set; }
         public String descricao { get; set; }
         public DateTime criadoEm { get; set; }
-
-        public List<Produto> Produtos { get; set; }
 
     }
 }
