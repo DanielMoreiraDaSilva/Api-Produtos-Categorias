@@ -4159,11 +4159,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Core\\Core.csproj",
+      "projectUniqueName": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Core\\Core.csproj",
+      "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\dmoreira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Core\\obj\\",
+      "outputPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dmoreira\\AppData\\Roaming\\NuGet\\NuGet.Config"

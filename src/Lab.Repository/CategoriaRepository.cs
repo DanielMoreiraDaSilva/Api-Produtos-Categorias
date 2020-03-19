@@ -30,6 +30,11 @@ namespace Lab.Repository
             var produto = db.Categorias.FirstOrDefault(c => c.descricao == descricao);
             return produto;
         }
+        public Guid GetCategoria(Categoria categoria)
+        {
+            var c = db.Categorias.Find(categoria.Id);
+            return c.Id;            
+        }
         public List<Categoria> GetAll()
         {
             return db.Categorias.ToList();

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Lab.Core.Model
@@ -14,6 +15,8 @@ namespace Lab.Core.Model
         public String codigo { get; set; }
         public String descricao { get; set; }
         public DateTime criadoEm { get; set; }
+
+        public List<Produto> Produtos { get; set; }
 
     }
 }

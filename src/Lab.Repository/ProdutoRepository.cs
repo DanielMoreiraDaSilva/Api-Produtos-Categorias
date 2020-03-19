@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Lab.Core;
-using Lab.Core.DTO;
 using Lab.Core.Model;
 
 namespace Lab.Repository
@@ -14,7 +13,6 @@ namespace Lab.Repository
         {
             this.contexto = contexto;
         }
-
         public void Add(Produto produto)
         {
             contexto.Produtos.Add(produto);
@@ -36,8 +34,7 @@ namespace Lab.Repository
 
         public List<Produto> GetAll()
         {
-            List<Produto> produtos = contexto.Produtos.ToList();
-            return produtos;
+            return contexto.Produtos.ToList();
         }
 
         public Produto GetById(Guid id)

@@ -8,7 +8,8 @@ namespace Lab.Core
     {
         List<Categoria> GetAll();
         Categoria GetById(Guid id);
-        Categoria GetDescricao(String descricao);    
+        Categoria GetDescricao(String descricao);
+        Guid GetCategoria(Categoria categoria);    
         void Add(Categoria categoria);    
         void Update(Categoria categoria);
         void Delete(Guid id);

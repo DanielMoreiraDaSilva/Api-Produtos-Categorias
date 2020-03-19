@@ -3,6 +3,7 @@ using Lab.Core;
 using System;
 using Lab.Core.Model;
 using System.Collections.Generic;
+using Lab.Core.Mv;
 
 namespace Lab.Api.Controllers
 {
@@ -18,7 +19,7 @@ namespace Lab.Api.Controllers
         [HttpGet]
         public ActionResult GetAll()
         {
-            List<Produto> produtos = business.GetAll();
+            List<ProdutoViewModel> produtos = business.GetAll();
             return Ok(produtos);
         }
         [HttpGet("{id}")]
@@ -32,7 +33,7 @@ namespace Lab.Api.Controllers
             return Ok(business.GetDescricao(descricao));
         }
         [HttpPost]
-        public ActionResult Post([FromBody]Produto produto)
+        public ActionResult Post([FromBody]ProdutoViewModel produto)
         {
             business.Add(produto);
             return Ok();

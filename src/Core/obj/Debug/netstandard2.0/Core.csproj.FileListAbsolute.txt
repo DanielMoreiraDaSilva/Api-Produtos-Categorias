@@ -14,3 +14,11 @@ C:\Users\dmoreira\Desktop\Treinamento\Desafio\my-solution-foulder\src\Core\obj\D
 C:\Users\dmoreira\Desktop\Treinamento\Desafio\my-solution-foulder\src\Core\obj\Debug\netstandard2.0\Core.dll
 C:\Users\dmoreira\Desktop\Treinamento\Desafio\my-solution-foulder\src\Core\obj\Debug\netstandard2.0\Core.pdb
 C:\Users\dmoreira\Desktop\Treinamento\Desafio\my-solution-foulder\src\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Core\bin\Debug\netstandard2.0\Core.deps.json
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Core\bin\Debug\netstandard2.0\Core.dll
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Core\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Core\obj\Debug\netstandard2.0\Core.dll
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Core\obj\Debug\netstandard2.0\Core.pdb

@@ -11,19 +11,23 @@
           "lib/net45/System.Web.Cors.dll": {}
         }
       },
-      "Microsoft.AspNet.WebApi.Client/5.2.2": {
-        "type": "package",
-        "compile": {
-          "lib/net45/System.Net.Http.Formatting.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Net.Http.Formatting.dll": {}
-        }
-      },
-      "Microsoft.AspNet.WebApi.Core/5.2.2": {
+      "Microsoft.AspNet.WebApi.Client/5.2.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNet.WebApi.Client": "5.2.2"
+          "Newtonsoft.Json": "10.0.1",
+          "Newtonsoft.Json.Bson": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Core/5.2.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.WebApi.Client": "5.2.7"
         },
         "compile": {
           "lib/net45/System.Web.Http.dll": {}
@@ -1250,32 +1254,34 @@
         "microsoft.aspnet.cors.nuspec"
       ]
     },
-    "Microsoft.AspNet.WebApi.Client/5.2.2": {
-      "sha512": "YVq+s0WeXrPxJk57CoElbtMYf95j76uJcW6nue3Cs4eIer9sgUp4rasSo0gALX3ls1Zf2jMceOLik9X/sJyrwA==",
+    "Microsoft.AspNet.WebApi.Client/5.2.7": {
+      "sha512": "/76fAHknzvFqbznS6Uj2sOyE9rJB3PltY+f53TH8dX9RiGhk02EhuFCWljSj5nnqKaTsmma8DFR50OGyQ4yJ1g==",
       "type": "package",
-      "path": "microsoft.aspnet.webapi.client/5.2.2",
+      "path": "microsoft.aspnet.webapi.client/5.2.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/System.Net.Http.Formatting.dll",
         "lib/net45/System.Net.Http.Formatting.xml",
+        "lib/netstandard2.0/System.Net.Http.Formatting.dll",
+        "lib/netstandard2.0/System.Net.Http.Formatting.xml",
         "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
         "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml",
-        "microsoft.aspnet.webapi.client.5.2.2.nupkg.sha512",
+        "microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
         "microsoft.aspnet.webapi.client.nuspec"
       ]
     },
-    "Microsoft.AspNet.WebApi.Core/5.2.2": {
-      "sha512": "P5boFqqGDq1XF7PVz1U4ju85wQLT0Pb5BbuiWy72cOmWXJKCCNqL+av6omi30knp62hpmfw+3rSCm+Nmt5zRgQ==",
+    "Microsoft.AspNet.WebApi.Core/5.2.7": {
+      "sha512": "gM2QzApnHdy1FbKUJ/ROGJSm69P2G+HMoVd/t5Vq1O/zZ5TI4IKC9PX6nUfRt/NHgebZOIWHpB4/4K4inuy4yQ==",
       "type": "package",
-      "path": "microsoft.aspnet.webapi.core/5.2.2",
+      "path": "microsoft.aspnet.webapi.core/5.2.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Content/web.config.transform",
         "lib/net45/System.Web.Http.dll",
         "lib/net45/System.Web.Http.xml",
-        "microsoft.aspnet.webapi.core.5.2.2.nupkg.sha512",
+        "microsoft.aspnet.webapi.core.5.2.7.nupkg.sha512",
         "microsoft.aspnet.webapi.core.nuspec"
       ]
     },
@@ -4076,6 +4082,7 @@
     ".NETCoreApp,Version=v3.1": [
       "Business >= 1.0.0",
       "Core >= 1.0.0",
+      "Microsoft.AspNet.WebApi.Core >= 5.2.7",
       "Microsoft.AspNetCore.Mvc.DataAnnotations >= 2.2.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.2",
       "Microsoft.EntityFrameworkCore.InMemory >= 3.1.2",
@@ -4090,11 +4097,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Lab.Api\\Lab.Api.csproj",
+      "projectUniqueName": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Api\\Lab.Api.csproj",
       "projectName": "Lab.Api",
-      "projectPath": "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Lab.Api\\Lab.Api.csproj",
+      "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Api\\Lab.Api.csproj",
       "packagesPath": "C:\\Users\\dmoreira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Lab.Api\\obj\\",
+      "outputPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dmoreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4108,14 +4115,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Core\\Core.csproj"
+            "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj"
             },
-            "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Lab.Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Lab.Business\\Business.csproj"
+            "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj"
             },
-            "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Lab.Repository\\Repository.csproj": {
-              "projectPath": "C:\\Users\\dmoreira\\Desktop\\Treinamento\\Desafio\\my-solution-foulder\\src\\Lab.Repository\\Repository.csproj"
+            "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj"
             }
           }
         }
@@ -4129,6 +4136,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.AspNet.WebApi.Core": {
+            "target": "Package",
+            "version": "[5.2.7, )"
+          },
           "Microsoft.AspNetCore.Mvc.DataAnnotations": {
             "target": "Package",
             "version": "[2.2.0, )"
@@ -4174,6 +4185,16 @@
   },
   "logs": [
     {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Versão detectada do pacote fora da restrição de dependência: Microsoft.AspNet.WebApi.WebHost 4.0.20710 requer Microsoft.AspNet.WebApi.Core (>= 4.0.20710 && < 4.1.0), mas a versão Microsoft.AspNet.WebApi.Core 5.2.7 foi resolvida.",
+      "libraryId": "Microsoft.AspNet.WebApi.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
@@ -4187,17 +4208,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'Microsoft.AspNet.WebApi.Client 5.2.2' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
-      "libraryId": "Microsoft.AspNet.WebApi.Client",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "O pacote 'Microsoft.AspNet.WebApi.Core 5.2.2' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "message": "O pacote 'Microsoft.AspNet.WebApi.Core 5.2.7' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
@@ -4259,15 +4270,6 @@
       "warningLevel": 1,
       "message": "O pacote 'WebActivatorEx 2.0.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "WebActivatorEx",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    },
-    {
-      "code": "NU1107",
-      "level": "Error",
-      "message": "Conflito de versão detectado para Microsoft.AspNet.WebApi.Core. Instale/referencie Microsoft.AspNet.WebApi.Core 5.2.2 diretamente no projeto Lab.Api para resolver esse problema. \r\n Lab.Api -> Swashbuckle.Core.Net45 5.2.1 -> Microsoft.AspNet.WebApi.Core (>= 5.2.2) \r\n Lab.Api -> Swashbuckle 5.6.0 -> Microsoft.AspNet.WebApi.WebHost 4.0.20710 -> Microsoft.AspNet.WebApi.Core (>= 4.0.20710 && < 4.1.0).",
-      "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

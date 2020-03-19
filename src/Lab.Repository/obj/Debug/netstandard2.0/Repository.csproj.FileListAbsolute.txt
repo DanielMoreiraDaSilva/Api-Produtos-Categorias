@@ -20,3 +20,14 @@ C:\Users\dmoreira\Desktop\Treinamento\Desafio\my-solution-foulder\src\Lab.Reposi
 C:\Users\dmoreira\Desktop\Treinamento\Desafio\my-solution-foulder\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.csproj.CopyComplete
 C:\Users\dmoreira\Desktop\Treinamento\Desafio\my-solution-foulder\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.dll
 C:\Users\dmoreira\Desktop\Treinamento\Desafio\my-solution-foulder\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.pdb
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\bin\Debug\netstandard2.0\Repository.deps.json
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\bin\Debug\netstandard2.0\Repository.dll
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\bin\Debug\netstandard2.0\Repository.pdb
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\bin\Debug\netstandard2.0\Core.dll
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.csprojAssemblyReference.cache
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfoInputs.cache
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfo.cs
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.csproj.CopyComplete
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.dll
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.pdb
