@@ -16,35 +16,6 @@ namespace Lab.Business
             this.produtoRepository = produtoRepository;
             this.categoriaRepository = categoriaRepository;
         }
-        public void Add(ProdutoViewModel produtoViewlModel)
-        {
-            // if (produto.Codigo.Length == 4 && produto.Preco >= 0)
-            // {
-            var produto = new Produto();
-            produto.Id = produtoViewlModel.Id;
-            produto.Codigo = produtoViewlModel.Codigo;
-            produto.Descricao = produtoViewlModel.Descricao;
-            produto.UnidadeMedida = produtoViewlModel.UnidadeMedida;
-            produto.Preco = produtoViewlModel.Preco;
-            if (produtoViewlModel.Categoria != null)
-            {
-            produto.CategoriaId = categoriaRepository.GetCategoria(produtoViewlModel.Categoria);
-            }
-
-            produtoRepository.Add(produto);
-            // }
-        }
-
-        public void Delete(Guid id)
-        {
-            produtoRepository.Delete(id);
-        }
-
-        public Produto GetDescricao(string codigo)
-        {
-            return produtoRepository.GetDescricao(codigo);
-        }
-
         public List<ProdutoViewModel> GetAll()
         {
             List<Produto> produtos = produtoRepository.GetAll();
@@ -60,25 +31,82 @@ namespace Lab.Business
                 produtoViewModel.Categoria = categoriaRepository.GetById(produtos[i].CategoriaId);
                 if (produtoViewModel.Categoria == null)
                 {
-                produtoViewModel.Categoria = new Categoria();
+                    produtoViewModel.Categoria = new Categoria();
                 }
-
                 produtosViewModel.Add(produtoViewModel);
             }
             return produtosViewModel;
         }
-
-        public Produto GetById(Guid id)
+        public ProdutoViewModel GetById(Guid id)
         {
-            return produtoRepository.GetById(id);
+            var produto = produtoRepository.GetById(id);
+            var produtoViewModel = new ProdutoViewModel();
+            produtoViewModel.Codigo = produto.Codigo;
+            produtoViewModel.Descricao = produto.Descricao;
+            produtoViewModel.Id = produto.Id;
+            produtoViewModel.Preco = produto.Preco;
+            produtoViewModel.UnidadeMedida = produto.UnidadeMedida;
+            produtoViewModel.Categoria = categoriaRepository.GetById(produto.CategoriaId);
+            if (produtoViewModel.Categoria == null)
+            {
+                produtoViewModel.Categoria = new Categoria();
+            }
+            return produtoViewModel;
         }
-
-        public void Update(Produto produto)
+        public ProdutoViewModel GetDescricao(string codigo)
         {
-            // if (produto.Codigo.Length == 4 && produto.Preco >= 0)
-            // {
-            produtoRepository.Update(produto);
-            // }
+            var produto = produtoRepository.GetDescricao(codigo);
+            var produtoViewModel = new ProdutoViewModel();
+            produtoViewModel.Codigo = produto.Codigo;
+            produtoViewModel.Descricao = produto.Descricao;
+            produtoViewModel.Id = produto.Id;
+            produtoViewModel.Preco = produto.Preco;
+            produtoViewModel.UnidadeMedida = produto.UnidadeMedida;
+            produtoViewModel.Categoria = categoriaRepository.GetById(produto.CategoriaId);
+            if (produtoViewModel.Categoria == null)
+            {
+                produtoViewModel.Categoria = new Categoria();
+            }
+            return produtoViewModel;
+        }
+        public void Add(ProdutoViewModel produtoViewModel)
+        {
+            if (produtoViewModel.Codigo.Length == 4 && produtoViewModel.Preco >= 0)
+            {
+                var produto = new Produto();
+                produto.Id = produtoViewModel.Id;
+                produto.Codigo = produtoViewModel.Codigo;
+                produto.Descricao = produtoViewModel.Descricao;
+                produto.UnidadeMedida = produtoViewModel.UnidadeMedida;
+                produto.Preco = produtoViewModel.Preco;
+                if (produtoViewModel.Categoria != null)
+                {
+                    produto.CategoriaId = categoriaRepository.GetCategoria(produtoViewModel.Categoria);
+                }
+
+                produtoRepository.Add(produto);
+            }
+        }
+        public void Delete(Guid id)
+        {
+            produtoRepository.Delete(id);
+        }
+        public void Update(ProdutoViewModel produtoViewModel)
+        {
+            if (produtoViewModel.Codigo.Length == 4 && produtoViewModel.Preco >= 0)
+            {
+                var produto = new Produto();
+                produto.Id = produtoViewModel.Id;
+                produto.Codigo = produtoViewModel.Codigo;
+                produto.Descricao = produtoViewModel.Descricao;
+                produto.UnidadeMedida = produtoViewModel.UnidadeMedida;
+                produto.Preco = produtoViewModel.Preco;
+                if (produtoViewModel.Categoria != null)
+                {
+                    produto.CategoriaId = categoriaRepository.GetCategoria(produtoViewModel.Categoria);
+                }
+                produtoRepository.Update(produto);
+            }
         }
     }
 }

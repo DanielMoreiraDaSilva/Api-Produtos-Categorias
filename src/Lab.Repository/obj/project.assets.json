@@ -4548,11 +4548,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj",
+      "projectUniqueName": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj",
+      "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\dmoreira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\obj\\",
+      "outputPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dmoreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4566,8 +4566,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj"
+            "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
+              "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj"
             }
           }
         }

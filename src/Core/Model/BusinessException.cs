@@ -4,6 +4,7 @@ namespace Lab.Core.Model
 {
     public class BusinessException : Exception
     {
+        
         public BusinessException()
         {
         }

@@ -35,15 +35,29 @@ namespace Lab.Api.Controllers
         [HttpPost]
         public ActionResult Post([FromBody]ProdutoViewModel produto)
         {
-            business.Add(produto);
-            return Ok();
+            try
+            {
+                business.Add(produto);
+                return Ok();
+            }
+            catch (BusinessException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPut("{id}")]
-        public ActionResult Put(Produto produto)
+        public ActionResult Put(ProdutoViewModel produtoViewModel)
         {
-            business.Update(produto);
-            return Ok();
+            try
+            {
+                business.Update(produtoViewModel);
+                return Ok();
+            }
+            catch (BusinessException Ex)
+            {
+                return BadRequest(Ex.Message);
+            }
         }
         [HttpDelete("{id}")]
         public ActionResult Delete(Guid id)

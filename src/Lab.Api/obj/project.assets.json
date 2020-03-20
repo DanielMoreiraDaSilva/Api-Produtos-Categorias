@@ -4097,11 +4097,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Api\\Lab.Api.csproj",
+      "projectUniqueName": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Api\\Lab.Api.csproj",
       "projectName": "Lab.Api",
-      "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Api\\Lab.Api.csproj",
+      "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Api\\Lab.Api.csproj",
       "packagesPath": "C:\\Users\\dmoreira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Api\\obj\\",
+      "outputPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dmoreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4115,14 +4115,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj"
+            "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
+              "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj"
             },
-            "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj"
+            "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj": {
+              "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj"
             },
-            "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj": {
-              "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj"
+            "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj": {
+              "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj"
             }
           }
         }

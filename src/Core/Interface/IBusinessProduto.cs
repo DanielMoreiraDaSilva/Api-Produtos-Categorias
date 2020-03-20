@@ -8,10 +8,10 @@ namespace Lab.Core
     public interface IBusinessProduto
     {
         List<ProdutoViewModel> GetAll();
-        Produto GetById(Guid id);
-        Produto GetDescricao(String descricao);
+        ProdutoViewModel GetById(Guid id);
+        ProdutoViewModel GetDescricao(String descricao);
         void Add(ProdutoViewModel produto);
-        void Update(Produto produto);
+        void Update(ProdutoViewModel produtoViewModel);
         void Delete(Guid id);
     }
 }
