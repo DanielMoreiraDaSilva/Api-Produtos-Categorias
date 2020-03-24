@@ -149,3 +149,5 @@ C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\obj\Debug\netcorea
 C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\obj\Debug\netcoreapp3.1\staticwebassets\Lab.Api.StaticWebAssets.xml
 C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\obj\Debug\netcoreapp3.1\Lab.Api.dll
 C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\obj\Debug\netcoreapp3.1\Lab.Api.pdb
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\obj\Debug\netcoreapp3.1\Lab.Api.csproj.CoreCompileInputs.cache
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\obj\Debug\netcoreapp3.1\Lab.Api.genruntimeconfig.cache

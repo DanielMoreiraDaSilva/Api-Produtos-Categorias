@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj": {}
+    "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj": {}
   },
   "projects": {
-    "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
+    "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\dmoreira\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\obj\\",
+        "outputPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dmoreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,18 +57,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj": {
+    "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj",
+        "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\Business.csproj",
         "packagesPath": "C:\\Users\\dmoreira\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\obj\\",
+        "outputPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dmoreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -82,11 +82,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
-                "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj"
+              "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj"
               },
-              "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj": {
-                "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj"
+              "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj"
               }
             }
           }
@@ -117,18 +117,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj": {
+    "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\dmoreira\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\obj\\",
+        "outputPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Lab.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dmoreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -142,8 +142,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
-                "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj"
+              "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj"
               }
             }
           }
@@ -178,7 +178,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

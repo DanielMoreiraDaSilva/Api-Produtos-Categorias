@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {}
+    "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {}
   },
   "projects": {
-    "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
+    "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\dmoreira\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\obj\\",
+        "outputPath": "C:\\Users\\dmoreira\\Desktop\\Api-Produtos-Categorias\\src\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dmoreira\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,7 +57,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

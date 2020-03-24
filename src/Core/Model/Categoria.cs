@@ -6,10 +6,6 @@ namespace Lab.Core.Model
 {
     public class Categoria
     {
-        public Categoria()
-        {
-            criadoEm = DateTime.Now;
-        }
         public Guid Id { get; set; }
         public String codigo { get; set; }
         public String descricao { get; set; }

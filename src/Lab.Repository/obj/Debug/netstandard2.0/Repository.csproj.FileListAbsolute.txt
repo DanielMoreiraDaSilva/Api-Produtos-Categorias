@@ -31,3 +31,4 @@ C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\obj\Debug\n
 C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.csproj.CopyComplete
 C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.dll
 C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.pdb
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Repository\obj\Debug\netstandard2.0\Repository.csproj.CoreCompileInputs.cache
