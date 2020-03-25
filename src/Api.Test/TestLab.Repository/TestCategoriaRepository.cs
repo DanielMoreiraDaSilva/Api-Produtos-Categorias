@@ -17,23 +17,22 @@ namespace Api.Test
         //     this.categoriaRepository = CategoriaRepository;
         // }
         [Fact]
-        public void Test1()
+        public void TestAddCategoriaRepository()
         {
-            var contextoMock = new Mock<Contexto>();
-            var setMock = new Mock<DbSet<Categoria>>();
-            contextoMock.Setup(c => c.Categorias).Returns(setMock.Object);
-            var categoriaRepository = new CategoriaRepository(contextoMock.Object);
-
+            var optionsBuilder = new DbContextOptionsBuilder<Contexto>();
+            optionsBuilder.UseInMemoryDatabase(Guid.NewGuid().ToString());
+            var contexto = new Contexto(optionsBuilder.Options);
+            // var mockContexto = new Mock<Contexto>();
+            // contextoMock.Setup(c => c.Categorias).Returns(setMock.Object);
+            var categoriaRepository = new CategoriaRepository(contexto);
             var categoria = new Categoria()
             {
                 codigo = "1234",
                 descricao = "Eletronico",
             };
-            
             categoriaRepository.Add(categoria);
-            // var teste = categoria;
-            // var teste = categoriaRepository.GetById(categoria.Id);
-            contextoMock.Verify(c => c.SaveChanges(),Times.Once());
+
+            Assert.Contains(categoria, contexto.Categorias);
         }
     }
 }
