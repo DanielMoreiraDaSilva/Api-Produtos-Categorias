@@ -34,7 +34,7 @@ namespace Lab.Repository
         }
         public Guid GetCategoria(Categoria categoria)
         {
-            if (categoria != null)
+            if (categoria.descricao != null || categoria.codigo != null)
             {
                 var c = db.Categorias.Find(categoria.Id);
                 return c.Id;

@@ -79,10 +79,7 @@ namespace Lab.Business
                 produto.Descricao = produtoViewModel.Descricao;
                 produto.UnidadeMedida = produtoViewModel.UnidadeMedida;
                 produto.Preco = produtoViewModel.Preco;
-                if (produtoViewModel.Categoria != null)
-                {
-                    produto.CategoriaId = categoriaRepository.GetCategoria(produtoViewModel.Categoria);
-                }
+                produto.CategoriaId = categoriaRepository.GetCategoria(produtoViewModel.Categoria);
 
                 produtoRepository.Add(produto);
             }

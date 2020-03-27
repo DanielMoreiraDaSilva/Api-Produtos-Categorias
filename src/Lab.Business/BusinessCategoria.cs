@@ -19,11 +19,10 @@ namespace Lab.Business
             if (categoria.codigo.Length == 4)
             {
                 categoriaRepository.Add(categoria);
-
             }
             else
             {
-                throw new BusinessException();
+                throw new BusinessException("Não rolo cara");
             }
         }
         public void Delete(Guid id)
