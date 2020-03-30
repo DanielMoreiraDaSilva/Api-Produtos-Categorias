@@ -151,3 +151,8 @@ C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\obj\Debug\netcorea
 C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\obj\Debug\netcoreapp3.1\Lab.Api.pdb
 C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\obj\Debug\netcoreapp3.1\Lab.Api.csproj.CoreCompileInputs.cache
 C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\obj\Debug\netcoreapp3.1\Lab.Api.genruntimeconfig.cache
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\dmoreira\Desktop\Api-Produtos-Categorias\src\Lab.Api\obj\Debug\netcoreapp3.1\Lab.Api.MvcApplicationPartsAssemblyInfo.cs

@@ -126,6 +126,10 @@
             "Swashbuckle.Core.Net45": {
               "target": "Package",
               "version": "[5.2.1, )"
+            },
+            "swashbuckle.aspnetcore": {
+              "target": "Package",
+              "version": "[5.2.1, )"
             }
           },
           "imports": [

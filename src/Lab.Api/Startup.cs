@@ -16,6 +16,8 @@ using Lab.Repository;
 using Lab.Core.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Swashbuckle.Swagger;
+
 
 namespace Lab.Api
 {
@@ -39,6 +41,13 @@ namespace Lab.Api
             services.AddTransient<ICategoria, CategoriaRepository>();
             services.AddTransient<IProduto, ProdutoRepository>();
             services.AddDbContext<Contexto>(c => c.UseInMemoryDatabase(databaseName: "Demo"));
+            services.AddMvc();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",new Microsoft.OpenApi.Models.OpenApiInfo {Title = "Api_Estudos", Version = "v1"});
+            });
+            
+            
 
         }
 
@@ -57,6 +66,10 @@ namespace Lab.Api
                  .AllowAnyOrigin();
                  
             });
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(s => s.SwaggerEndpoint("/swagger/v1/swagger.json", "Api_Estudos"));
 
             //app.UseHttpsRedirection();
 
