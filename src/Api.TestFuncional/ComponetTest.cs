@@ -11,14 +11,14 @@ using System.Net.Http;
 
 namespace Api.TestFuncional
 {
-    public class UnitTest1
+    public class ComponentTest
             : IClassFixture<WebApplicationFactory<Startup>>
 
     {
         private readonly WebApplicationFactory<Startup> factory;
         private readonly HttpClient client;
 
-        public UnitTest1(WebApplicationFactory<Startup> factory, HttpClient client)
+        public ComponentTest(WebApplicationFactory<Startup> factory, HttpClient client)
         {
             this.factory = factory;
             this.client = factory.CreateClient();
