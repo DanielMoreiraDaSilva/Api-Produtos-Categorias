@@ -32,8 +32,15 @@ namespace Lab.Api.Controllers
         [HttpGet("{id}")]
         public ActionResult GetById(Guid id)
         {
-            return Ok(business.GetById(id));
-        }
+            try
+            {
+                return Ok(business.GetById(id));
+            }
+            catch(Exception)
+            {
+                return NotFound();
+            }
+        }    
         [HttpGet("Search")]
         public ActionResult GetByDescriçao([FromQuery]string descricao)
         {

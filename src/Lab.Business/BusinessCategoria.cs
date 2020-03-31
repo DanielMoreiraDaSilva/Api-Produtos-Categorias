@@ -41,9 +41,16 @@ namespace Lab.Business
         }
         public Categoria GetById(Guid id)
         {
-            return categoriaRepository.GetById(id);
+            var i = categoriaRepository.GetById(id);
+            if (i == null)
+            {
+                throw new Exception();
+            }
+            else
+            {
+                return i;
+            }
         }
-
         public void Update(Categoria categoria)
         {
             if (categoria.codigo.Length == 4)
