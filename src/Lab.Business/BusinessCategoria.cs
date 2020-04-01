@@ -32,7 +32,15 @@ namespace Lab.Business
 
         public Categoria GetDescricao(string codigo)
         {
-            return categoriaRepository.GetDescricao(codigo);
+            var i = categoriaRepository.GetDescricao(codigo);
+            if (i == null)
+            {
+                throw new Exception();
+            }
+            else
+            {
+                return i;
+            }
         }
 
         public List<Categoria> GetAll()

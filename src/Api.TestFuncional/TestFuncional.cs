@@ -9,6 +9,12 @@ using Lab.Api;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Formatting;
+using System.Collections.Generic;
+using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
+using Newtonsoft.Json;
+using Lab.Repository;
+using Microsoft.EntityFrameworkCore;
 
 namespace Api.TestFuncional
 {
@@ -22,6 +28,7 @@ namespace Api.TestFuncional
         public TestFuncional(WebApplicationFactory<Startup> factory)
         {
             this.factory = factory;
+            TestGetAll();
         }
 
         // [Fact]
@@ -85,56 +92,155 @@ namespace Api.TestFuncional
 
         [Fact]
 
-        public void TestGetAll()
+        public async void TestGetAll()
         {
 
             var endpoint = new Uri($"api/categorias", UriKind.Relative);
+            var mockBusinesCategoria = new Mock<IBusinessCategoria>();
 
-            var client = factory.CreateClient();
+            var listCategoria = new List<Categoria>(){
+                new Categoria(){
+                    codigo = "1234",
+                    descricao = "name"
+                }
+            };
 
-            var resposta = client.GetAsync(endpoint).Result;
+            mockBusinesCategoria.Setup(m => m.GetAll()).Returns(listCategoria);
 
+            var client = factory.WithWebHostBuilder(builder => builder.ConfigureServices(
+                services => { 
+
+                    services.AddTransient<IBusinessCategoria>(s => mockBusinesCategoria.Object); 
+
+                })).CreateClient();
+
+            var resposta = await client.GetAsync(endpoint);
+
+            var respostaContent = await resposta.Content.ReadAsStringAsync();
+
+            var result = JsonConvert.DeserializeObject<List<Categoria>>(respostaContent);
+
+            
             Assert.Equal(HttpStatusCode.OK, resposta.StatusCode);
+            Assert.Equal(result.FirstOrDefault().codigo, "1234");
+            Assert.Equal(result.FirstOrDefault().descricao, "name");
 
         }
+
         [Fact]
-        public void TestGetById()
+        public async void TestGetById()
+        {
+        //Given
+
+        var mockBusinesCategoria = new Mock<IBusinessCategoria>();
+        var listCategoria = new List<Categoria>(){new Categoria(){
+            Id = Guid.NewGuid(),
+            codigo = "1234",
+            descricao = "name"
+        }};
+
+        var endpoint = new Uri($"api/categorias/{listCategoria.FirstOrDefault().Id}", UriKind.Relative);
+
+        mockBusinesCategoria.Setup(s => s.GetById(listCategoria.FirstOrDefault().Id)).Returns(listCategoria[0]);
+
+        var client = factory.WithWebHostBuilder(builder => builder.ConfigureServices(services =>
+
+            services.AddTransient<IBusinessCategoria>(s => mockBusinesCategoria.Object)
+        
+        )).CreateClient();
+
+        //When
+
+        var result = await client.GetAsync(endpoint);
+
+        var resultContent = await result.Content.ReadAsStringAsync();
+
+        var resultObject = JsonConvert.DeserializeObject<Categoria>(resultContent);
+        
+        //Then
+
+        mockBusinesCategoria.Verify(m => m.GetById(listCategoria.FirstOrDefault().Id), Times.Once());
+        Assert.Equal(HttpStatusCode.OK, result.StatusCode);
+        Assert.Equal("1234", resultObject.codigo);
+        Assert.Equal("name", resultObject.descricao);
+        
+        }
+
+
+        [Fact]
+        public async void TestGetDescricao()
+        {
+        //Given
+
+        var mockBusinesCategoria = new Mock<IBusinessCategoria>();
+        var listCategoria = new List<Categoria>(){new Categoria(){
+            Id = Guid.NewGuid(),
+            codigo = "1234",
+            descricao = "name"
+        }};
+
+        var endpoint = new Uri($"api/categorias/search?descricao={listCategoria.FirstOrDefault().descricao}", UriKind.Relative);
+
+        mockBusinesCategoria.Setup(s => s.GetDescricao(listCategoria.FirstOrDefault().descricao)).Returns(listCategoria[0]);
+
+        var client = factory.WithWebHostBuilder(builder => builder.ConfigureServices(services =>
+
+            services.AddTransient<IBusinessCategoria>(s => mockBusinesCategoria.Object)
+        
+        )).CreateClient();
+
+        //When
+
+        var result = await client.GetAsync(endpoint);
+
+        var resultContent = await result.Content.ReadAsStringAsync();
+
+        var resultObject = JsonConvert.DeserializeObject<Categoria>(resultContent);
+        
+        //Then
+
+        mockBusinesCategoria.Verify(m => m.GetDescricao(listCategoria.FirstOrDefault().descricao), Times.Once());
+        Assert.Equal(HttpStatusCode.OK, result.StatusCode);
+        Assert.Equal("1234", resultObject.codigo);
+        Assert.Equal("name", resultObject.descricao);
+        
+        }        
+
+
+        [Fact]
+        public async void TestDelete()
         {
             //Given
-            var client = factory.CreateClient();
-            var categoria = new Categoria()
+            var mockBusinesCategoria = new Mock<IBusinessCategoria>();            
+            var listCategoria = new List<Categoria>(){new Categoria()
             {
                 Id = Guid.NewGuid(),
                 codigo = "1234",
                 descricao = "name"
-            };
-            var endpoint = new Uri($"api/categorias/{categoria.Id}", UriKind.Relative);
+            }};
+
+            var endpoint = new Uri($"api/categorias/{listCategoria.ToList().FirstOrDefault().Id}", UriKind.Relative);            
+
+            mockBusinesCategoria.Setup(s => 
+                
+                s.Delete(listCategoria.FirstOrDefault().Id)
+                
+            );
+            
+            var client = factory.WithWebHostBuilder(builder => builder.ConfigureServices(services => {
+                
+                services.AddTransient<IBusinessCategoria>(s => mockBusinesCategoria.Object);
+            
+            })).CreateClient();
+
 
             //When
-            var result = client.GetAsync(endpoint).Result;
+            var result = await client.DeleteAsync(endpoint);
+
 
             //Then
-            Assert.Equal(HttpStatusCode.NotFound, result.StatusCode);
-        }
-
-        [Fact]
-        public void TestGetByDescricao()
-        {
-            //Given
-            var client = factory.CreateClient();
-            var categoria = new Categoria()
-            {
-                Id = Guid.NewGuid(),
-                codigo = "1234",
-                descricao = "name"
-            };
-            var endpoint = new Uri($"api/categorias/search?{categoria.descricao}", UriKind.Relative);
-
-            //When
-            var result = client.GetAsync(endpoint).Result;
-
-            //Then
-            Assert.Equal(HttpStatusCode.NoContent, result.StatusCode);
+            mockBusinesCategoria.Verify(m => m.Delete(listCategoria.FirstOrDefault().Id), Times.Once());
+            Assert.Equal(HttpStatusCode.OK, result.StatusCode);
         }
 
 
@@ -169,13 +275,34 @@ namespace Api.TestFuncional
                 codigo = "1234",
                 descricao = "name"
             };
-            var endpoint = new Uri($"api/categorias/{categoria.Id}", UriKind.Relative);
+            var mockBusinesCategoria = new Mock<IBusinessCategoria>();
+            var controller = new categoriasController(mockBusinesCategoria.Object);
 
             //When
-            var client = factory.CreateClient();
-            var result = client.PutAsync(endpoint, categoria, new JsonMediaTypeFormatter());
+            controller.Put(categoria.Id,categoria);
+        
             //Then
-            // Assert.Equal(HttpStatusCode.BadRequest,result);
+            mockBusinesCategoria.Verify(c => c.Update(categoria),Times.Once());
         }
+
+        // [Fact]
+        // public void TestDelete2()
+        // {
+        //     //Given
+
+        //     var categoria = new Categoria()
+        //     {
+        //         Id = Guid.NewGuid(),
+        //         codigo = "1234",
+        //         descricao = "name"
+        //     };
+        //     var endpoint = new Uri($"api/categorias/{categoria.Id}", UriKind.Relative);
+
+        //     //When
+        //     var client = factory.CreateClient();
+        //     var result = client.DeleteAsync(endpoint).Result;
+        //     //Then
+        //     Assert.Equal();
+        // }
     }
 }

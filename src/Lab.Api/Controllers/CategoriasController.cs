@@ -44,7 +44,14 @@ namespace Lab.Api.Controllers
         [HttpGet("Search")]
         public ActionResult GetByDescriçao([FromQuery]string descricao)
         {
-            return Ok(business.GetDescricao(descricao));
+            try
+            {
+                return Ok(business.GetDescricao(descricao));
+            }
+            catch(Exception)
+            {
+                return NotFound();
+            }
         }
         [HttpPost]
         public ActionResult Post([FromBody]Categoria categoria)
