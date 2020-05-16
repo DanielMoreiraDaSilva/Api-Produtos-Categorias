@@ -16,13 +16,13 @@ namespace Lab.Repository
         {
             
         }
-        // protected override void OnModelCreating(ModelBuilder modelBuilder)
-        // {
-        //     base.OnModelCreating(modelBuilder);
-        //     modelBuilder.Entity<Produto>()
-        //                 .HasOne<Categoria>(s => s.);
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Produto>()
+                        .HasOne<Categoria>(s => s.);
 
-        // }
+        }
 
 
         //     //optionsBuilder.UseSqlServer(

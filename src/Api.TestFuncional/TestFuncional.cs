@@ -187,6 +187,7 @@ namespace Api.TestFuncional
             controllerCategoria.Post(categoria);
 
 
+
             //Then
             mockBusinesCategoria.Verify(m => m.Add(categoria), Times.Once());
             Assert.Equal(HttpStatusCode.OK, result.StatusCode);
@@ -226,15 +227,20 @@ namespace Api.TestFuncional
             listCategoria[0].codigo = "4567";
             listCategoria[0].descricao = "mudança";
 
-            controller.Put(listCategoria[0].Id, listCategoria[0]);
+            controller.Put(listCategoria[0]);
 
             var result = await client.PutAsync(endpoint, listCategoria[0], new JsonMediaTypeFormatter());
 
             var resultStatus = result.StatusCode;
 
+            var result2 = await client.PutAsync($"api/categorias/1", listCategoria[0], new JsonMediaTypeFormatter());
+
+            var resultNotFound = result2.StatusCode;
+
             //Then
             mockBusinesCategoria.Verify(c => c.Update(listCategoria[0]), Times.Once());
             Assert.Equal(HttpStatusCode.OK, resultStatus);
+            Assert.Equal(HttpStatusCode.NotFound, resultNotFound);
         }
 
         // -----------------------------------------------------------------------------------------------------------------------------------
@@ -251,7 +257,7 @@ namespace Api.TestFuncional
                 descricao = "name"
             }};
 
-            var endpoint = new Uri($"api/categorias/{listCategoria.ToList().FirstOrDefault().Id}", UriKind.Relative);
+            var endpoint = new Uri($"api/categorias/{listCategoria.FirstOrDefault().Id}", UriKind.Relative);
 
             mockBusinesCategoria.Setup(s =>
 

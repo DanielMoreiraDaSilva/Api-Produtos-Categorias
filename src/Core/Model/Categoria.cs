@@ -6,11 +6,6 @@ namespace Lab.Core.Model
 {
     public class Categoria
     {
-        public Categoria()
-        {
-            
-        }
-
         public Guid Id { get; set; }
         public string codigo { get; set; }
         public string descricao { get; set; }

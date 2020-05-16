@@ -29,6 +29,8 @@ namespace Lab.Api.Controllers
             List<Categoria> categorias = business.GetAll();
             return Ok(categorias);
         }
+
+
         [HttpGet("{id}")]
         public ActionResult GetById(Guid id)
         {
@@ -63,22 +65,22 @@ namespace Lab.Api.Controllers
             }
             catch (BusinessException ex)
             {
-                return BadRequest(ex.Message);
+                return NotFound(ex.Message);
             }
 
         }
         [HttpPut("{id}")]
-        public ActionResult Put(Guid id, Categoria categoria)
+        public ActionResult Put([FromBody] Categoria categoria)
         {
             try
             {
-                categoria.Id = id;
+                
                 business.Update(categoria);
                 return Ok();
             }
             catch (BusinessException ex)
             {
-                return BadRequest(ex.Message);
+                return NotFound(ex.Message);
             }
         }
         [HttpDelete("{id}")]
